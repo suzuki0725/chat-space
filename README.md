@@ -57,25 +57,18 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :group, through: :groups_users
-- has_many :message
+- has_many :groupss, through: :groups_users
+- has_many :messages
+- has_many :groups_users
 
 ## groupsテーブル
 
 |column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 
-- has_many :users, through: :group_users
+- has_many :users, through: :groups_users
 - has_many :messages
-
-
-
-
-
-
-
-
+- has_many :groups_users
