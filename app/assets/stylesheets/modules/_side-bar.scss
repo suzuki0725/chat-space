@@ -1,0 +1,52 @@
+.side-bar{
+  height: 100vh;
+  width: 300px;
+  font-weight: bold;
+  color: white;
+  &__user-name {
+  height: 100px;
+  background-color: #253141;
+  display: flex;
+  align-items: center;
+    &__top-item{
+    height: 20px;
+    width: 260px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+      .top-item__name{
+      font-size: 16px;
+      width: 60px;
+      line-height: 20px;
+      }
+      .top-item__icons{
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+        .icons__btn-edit{
+        color: white;
+        text-decoration: none;
+        margin-right: 5px;
+        }
+        .icons__btn-cog{
+        color: white;
+        text-decoration: none;
+        }
+      }
+    }
+  }
+  &__group-list{
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding-left: 20px;
+    &__group-name{
+    font-size: 15px;
+    padding-top: 20px;
+    }
+    &__latest-text{
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    }
+  }
+}
