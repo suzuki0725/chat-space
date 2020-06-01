@@ -44,17 +44,18 @@
       padding-top: 35px;
       display: flex;
       justify-content: flex-start;
-      .message-list__name{
+      .chat-main__message-list__name{
       color: #333333;
       font-size: 16px;
+      font-weight: bold;
       }
-      .message-list__datetime{
+      .chat-main__message-list__datetime{
       color: #999999;
       font-size: 12px;
       margin-left: 10px;
       }
     }
-    .message-list__text{
+    &__message-list__text{
       font-size: 14px;
       color: #434A54;
       padding-bottom: 46px;
@@ -69,18 +70,18 @@
       height: 50px;
       width: 100%;
       display: flex;
-      &-box{
+      .new-message-box{
         display: flex;
         position: relative;
         width: 100%;
         &__text{
           height: 50px;
-          width: 100%;
+          width: 935px;
           padding-left: 10px;
         }
         &__image{
           position: absolute;
-          right: 10px;
+          right: 135px;
           top: 10px;
           cursor: pointer;
           width: 20px;
@@ -94,10 +95,15 @@
       &__submit-btn{
          background-color: #38aef0;
          width: 100px;
+         height: 50px;
          margin-left: 15px;
          cursor: pointer;
          color: white;
       }
     }
   }
+}
+
+li{
+  display: inline;
 }
