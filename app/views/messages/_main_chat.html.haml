@@ -2,32 +2,22 @@
   .chat-main__group-info
     .chat-main__group-info__left-item 
       .left-item__group-name
-        test
-      .left-item__group-member
-        Member : suzu
+        =@group.name
+      %ul.left-item__group-member
+        Member : 
+        -@group.users.each do |user|
+          %li= user.name
     .chat-main__group-info__right-item
-      =link_to "#",class: "right-item__edit-btn" do
+      =link_to edit_group_path(current_user) ,class: "right-item__edit-btn" do
         Edit
   .chat-main__message-list
-    .chat-main__message-list__top-item
-      .message-list__name
-        suzu
-      .message-list__datetime
-        2020/05/20 19:00
-    .message-list__text
-      サマー
-    .chat-main__message-list__top-item
-      .message-list__name
-        suzu
-      .message-list__datetime
-        2020/05/20 19:00
-    .message-list__text
-      hello
+    = render @messages
   .chat-main__message-form
-    %form.new-message
+    .new-message
       .new-message-box
-        %input{type: "text",class: "new-message-box__text",placeholder: "type a message"}
-        %label{class: "new-message-box__image"}
-          =icon('far','image')
-          %input{type: "file",class: "new-message-box__file"}
-      %input{type: "submit", class: "new-message__submit-btn",value: "Send"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content,class: 'new-message-box__text',placeholder: 'type a message'
+          = f.label :image, class: 'new-message-box__image' do
+            = icon('far','image')
+            = f.file_field :image,class: 'new-message-box__file'
+          = f.submit 'Send', class: 'new-message__submit-btn'
