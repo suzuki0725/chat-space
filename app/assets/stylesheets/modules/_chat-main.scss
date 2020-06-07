@@ -40,6 +40,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding-left: 40px;
+    overflow: scroll;
     &__top-item{
       padding-top: 35px;
       display: flex;
