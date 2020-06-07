@@ -58,8 +58,10 @@ $('#new_message').on('submit', function(e){
   })
   .fail(function(){
     alert('メッセージ送信に失敗しました');
-    $('.new-message__submit-btn').prop('disabled', false);
-})
+  })
+  .always(function() {
+  $('.new-message__submit-btn').prop('disabled', false);
+  });
 });
 });
 
