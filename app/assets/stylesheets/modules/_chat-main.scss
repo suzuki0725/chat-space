@@ -64,46 +64,44 @@
     }
   }
   &__message-form{
-   height: 90px;
-   background-color: #d2d2d2;
-   padding: 20px 40px;
-    .new-message{
-      height: 50px;
-      width: 100%;
-      display: flex;
-      .new-message-box{
-        display: flex;
-        position: relative;
-        width: 100%;
-        &__text{
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+        .new-message-box__text{
+          border: none;
+          float: left;
           height: 50px;
-          width: 935px;
-          padding-left: 10px;
+          width: calc(100% - 150px);
+          padding-left: 3px;
         }
-        &__image{
-          position: absolute;
-          right: 135px;
-          top: 10px;
-          cursor: pointer;
-          width: 20px;
-          height: 30px;
-          font-size: 1.5rem;
+        .new-message-box{
+          background-color: white;
+          float: left;
+          height: 50px;
+          padding-right: 10px;
         }
-        &__file{
+        .new-message-box__image{
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .new-message-box__file{
           display: none;
         }
-      }
-      &__submit-btn{
-         background-color: #38aef0;
-         width: 100px;
-         height: 50px;
-         margin-left: 15px;
-         cursor: pointer;
-         color: white;
+      .new-message__submit-btn{
+        background-color: $light_blue;
+        border: none;
+        color: white;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+        border: 1px solid;
+        border-color: black;
       }
     }
   }
-}
 
 li{
   display: inline;
