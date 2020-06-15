@@ -73,7 +73,7 @@
           float: left;
           height: 50px;
           width: calc(100% - 150px);
-          padding-left: 3px;
+          padding-left: 10px;
         }
         .new-message-box{
           background-color: white;
@@ -84,6 +84,7 @@
         .new-message-box__image{
           font-size: 20px;
           line-height: 50px;
+          cursor: pointer;
         }
         .new-message-box__file{
           display: none;
@@ -99,6 +100,7 @@
         padding: 0 30px;
         border: 1px solid;
         border-color: black;
+        cursor: pointer;
       }
     }
   }
