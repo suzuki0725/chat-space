@@ -83,7 +83,7 @@ var reloadMessages = function() {
   };
 })
  .fail(function () {    
-    alert('メッセージを入力してください');
+    alert('自動更新に失敗しました');
  });
 };
 if (document.location.href.match(/\/groups\/\d+\/messages/)){
