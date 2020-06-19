@@ -58,7 +58,7 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
   })
   .fail(function(){
-    alert('メッセージ送信に失敗しました');
+    alert('メッセージを入力してください');
   })
   .always(function() {
   $('.new-message__submit-btn').prop('disabled', false);
@@ -83,7 +83,7 @@ var reloadMessages = function() {
   };
 })
  .fail(function () {    
-    alert('メッセージの取得に失敗しました');
+    alert('メッセージを入力してください');
  });
 };
 if (document.location.href.match(/\/groups\/\d+\/messages/)){
