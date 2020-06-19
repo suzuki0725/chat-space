@@ -68,21 +68,26 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    position: relative;
         .new-message-box__text{
           border: none;
           float: left;
           height: 50px;
-          width: calc(100% - 150px);
+          width: calc(100% - 120px);
           padding-left: 10px;
         }
         .new-message-box{
           background-color: white;
           float: left;
-          height: 50px;
+          height: 30px;
           padding-right: 10px;
+          position: absolute;
+          right: 180px;
+          width: 22px;
+          bottom: 37px;
         }
         .new-message-box__image{
-          font-size: 20px;
+          font-size: 1.5rem;
           line-height: 50px;
           cursor: pointer;
         }
